@@ -2,3 +2,6 @@
 
 ## Requests模块参考资料
 [快速上手http://docs.python-requests.org/zh_CN/latest/user/quickstart.html](http://docs.python-requests.org/zh_CN/latest/user/quickstart.html)
+
+## BeautifulSoup模块参考资料
+[Beautiful Soup 4.2.0 文档https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html](https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html)
