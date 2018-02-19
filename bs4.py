@@ -31,6 +31,16 @@ print(alink)
 for link in alink:
     print(link.text) #依次打出alink裏的内容。
 
+'''
+結果：
+[<h1 id="title">Hello world</h1>]
+<h1 id="title">Hello world</h1>
+Hello world
+[<a class="link" href="#">this is the link</a>, <a class="link" href="# link2">this is link2</a>]
+this is the link
+this is link2
+'''
+
 #使用select找出所有為id為title的元素。
 blink=soup.select('#title')
 print(blink)
@@ -38,4 +48,31 @@ print(blink)
 #使用select找出所有class為link的元素（class前需加 . ）
 for link in soup.select('.link'):
     print(link)
+
+'''
+結果：
+[<h1 id="title">Hello world</h1>]
+<a class="link" href="#">this is the link</a>
+<a class="link" href="# link2">this is link2</a>
+'''
+
+#使用select找出所有a tag的href鏈接。
+alinks=soup.select('a')#a標簽裏的屬性會被包裝成字典，所以可以用中括號取屬性。
+for link in alinks:
+    print(link['href']) #a標簽裏的href可以連接到其他網頁。
+
+'''
+結果：
+#
+# link2
+'''
+
+
+
+
+
+
+
+
+
 
