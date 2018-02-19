@@ -18,3 +18,17 @@ print(soup.text)
 <class 'bs4.BeautifulSoup'>
 Hello worldthis is the linkthis is link2
 '''
+
+#使用select，找出含有一些標簽的元素。回傳的是一個list。
+soup=BeautifulSoup(html_sample,'html.parser')
+header=soup.select('h1')
+print(header)
+print(header[0]) #取出list其中的一個。
+print(header[0].text) #把文字取出來。
+
+alink=soup.select('a')
+print(alink)
+for link in alink:
+    print(link.text) #依次打出alink裏的内容。
+
+
