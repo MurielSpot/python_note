@@ -31,4 +31,11 @@ print(alink)
 for link in alink:
     print(link.text) #依次打出alink裏的内容。
 
+#使用select找出所有為id為title的元素。
+blink=soup.select('#title')
+print(blink)
+
+#使用select找出所有class為link的元素（class前需加 . ）
+for link in soup.select('.link'):
+    print(link)
 
