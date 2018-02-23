@@ -12,6 +12,21 @@ article=[]
 for i in soup.select('.article p')[1:-1]:#[1:-1]表示把第一個p和最后一個p去掉。
     article.append(i.text.strip())#strip用來把空白字符去掉。
 
+t='<html>\
+<body>\
+<p>some some thing some</p>\
+</body>\
+<html>'
+s=BeautifulSoup(t,'html.parser')
+print(s.text.strip('some'))#將s文字裏兩頭的some去掉了。
+print(s.text.lstrip('some'))#將s中的文字，從左邊去掉了some。
+
+'''
+結果：
+ some thing 
+ some thing some
+'''
+    
 print('-------------'.join(article))#join更具前面引號的内容，對list裏的内容進行合并。這裏是根據空白進行合并，得到一個新字串。
 print(article)#但打印原list還是列表，不帶分隔符。
 
