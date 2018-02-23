@@ -20,8 +20,8 @@ t='<html>\
 s=BeautifulSoup(t,'html.parser')
 print(s.text.strip('some'))#將s文字裏兩頭的some去掉了。
 print(s.text.lstrip('some'))#將s中的文字，從左邊去掉了some。
-
 '''
+要處理的文字：some some thing some
 結果：
  some thing 
  some thing some
