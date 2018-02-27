@@ -118,10 +118,24 @@ javascript:;
 #
 '''
 
-
+#从文档中获取所有文字内容:
+print(soup.get_text())#獲得文字内容,不過還是有很多空白字符和\u類型的内容.
 '''
-輸出:
+部分輸出:
+© 2018 知乎
 
+
+
+
+{}
+
+<div>
+你的帐号由于存在异常?为暂时被限制使?。如需恢复，请
+<a target="_blank" href="/account/unblock">解封帐号</a>
+</div>
+
+["","","","-1","",0,0]
+{"realname_win_config":{"timestamp":1501344000,"tip":"\u5e94\u56fd\u5bb6\u6cd5\u89c4\u5bf9\u4e8e\u5e10\u53f7\u5b9e\u540d\u7684\u8981\u6c42\uff0c\u8fdb\u884c\u4e0b\u4e00\u6b65\u64cd\u4f5c\u524d\uff0c\u9700\u8981\u5148\u5b8c\u6210\u624b\u673a\u7ed1\u5b9a\u3002","continue":0,"continue_time":3600,"skip_ut_verification":0}}
 '''
 
 
