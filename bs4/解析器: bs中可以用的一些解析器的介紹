@@ -34,3 +34,6 @@ html5lib	BeautifulSoup(markup, "html5lib")
 生成HTML5格式的文档
 速度慢
 不依赖外部扩展
+
+推荐使用lxml作为解析器,因为效率更高. 在Python2.7.3之前的版本和Python3中3.2.2之前的版本,必须安装lxml或html5lib, 因为那些Python版本的标准库中内置的HTML解析方法不够稳定.
+提示: 如果一段HTML或XML文档格式不正确的话,那么在不同的解析器中返回的结果可能是不一样的,查看 解析器之间的区别 了解更多细节
