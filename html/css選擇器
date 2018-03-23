@@ -1,0 +1,93 @@
+css选择器: 一种快速定位元素的方法.
+用css選擇器比正則表達式更方便.
+
+beautifulsoup和scrapy等都支持css選擇器.
+
+* 选择所有元素.
+.class 如.intro,选择所有class="intro"的元素.
+#id 如#firstname,选择所有id="firstname"的元素.
+element 如p,选择所有<p>元素.
+:not(selector) 如:not(p),选择每个并非p元素的元素.
+
+element1,element2 選擇所有<element1>和<element2>元素. 
+element element 如div p,选择<div>元素内的所有<p>元素(后代们).
+element>element 如div>p,选择所有父级是 <div> 元素的 <p> 元素(儿子们).
+element1~element2 如p~ul,选择p元素之后的每一个ul元素(弟弟们).
+element+element 如div+p,选择所有紧接着<div>元素之后的<p>元素(第一个弟弟).
+
+[attribute]
+举例: [target]
+解释: 选择所有带有target属性元素
+
+[attribute=value]
+举例: [target=-blank]
+解释: 选择所有使用target="-blank"的元素
+
+[attribute^=value]
+举例: a[href^="https"]
+解释: 选择每一个href属性的值以"https"开头的元素
+
+[attribute$=value]
+举例: a[href$=".pdf"]
+解释: 选择每一个href属性的值以".pdf"结尾的元素
+
+[attribute*=value]
+举例: a[href*="runoob"]
+解释: 选择每一个href属性的值包含子字符串"runoob"的元素
+
+
+:first-child
+举例: p:first-child
+解释: 指定只有当<p>元素是其父级的第一个子级的样式。
+
+:first-of-type
+举例: p:first-of-type
+解释: 选择每个p元素是其父级的第一个p元素
+
+:last-of-type
+举例: p:last-of-type
+解释: 选择每个p元素是其父级的最后一个p元素
+
+:only-of-type
+举例: p:only-of-type
+解释: 选择每个p元素是其父级的唯一p元素
+
+:only-child
+举例: p:only-child
+解释: 选择每个p元素是其父级的唯一子元素
+
+:nth-child(n)
+举例: p:nth-child(2)
+解释: 选择每个p元素是其父级的第二个子元素
+
+:nth-last-child(n)
+举例: p:nth-last-child(2)
+解释: 选择每个p元素的是其父级的第二个子元素，从最后一个子项计数
+
+:nth-of-type(n)
+举例: p:nth-of-type(2)
+解释: 选择每个p元素是其父级的第二个p元素
+
+:nth-last-of-type(n)
+举例: p:nth-last-of-type(2)
+解释: 选择每个p元素的是其父级的第二个p元素，从最后一个子项计数
+
+:last-child
+举例: p:last-child
+解释: 选择每个p元素是其父级的最后一个子级。
+
+:empty
+举例: p:empty
+解释: 选择每个没有任何子级的p元素（包括文本节点）
+
+element.class
+举例: p.hello
+解释: 所有class="hello"的p标签
+
+element.class.class
+举例: p.hello.world
+解释: 所有class="hello world"的标签
+
+element.class element.class
+举例: p.hello p.world
+解释: 所有class="hello"的p标签下的所有class="world"的p标签
