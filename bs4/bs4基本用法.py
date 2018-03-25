@@ -97,4 +97,16 @@ print(soup.attrs)
 {}
 '''
 
+print(soup.div.string)
+print(type(soup.div.string))#注意到上面的div裏是注釋,所以這裏的string是注釋類型的.
+print(type(soup.p.string))#p裏不是注釋,所以類型不是注釋類型的.
+#另外注意soup.什麽,獲取的是第一個標簽,比如上面獲取的是第一個div,第一個p.
+'''
+输出：
+ comment test 
+<class 'bs4.element.Comment'>
+<class 'bs4.element.NavigableString'>
+'''
+
+
 
