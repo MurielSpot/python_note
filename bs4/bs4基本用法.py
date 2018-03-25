@@ -60,6 +60,14 @@ Tag
 通俗点讲就是 HTML 中的一个个标签，像上面的 div，p。每个 Tag 有两个重要的属性 name 和 attrs， 
 name 指标签的名字或者 tag 本身的 name，attrs 通常指一个标签的 class。
 
+NavigableString
+获取标签内部的文字，如，soup.p.string。
+
+BeautifulSoup
+表示一个文档的全部内容。
+
+Comment
+Comment对象是一个特殊类型的 NavigableString对象，其输出的内容不包括注释符号
 '''
 print(type(soup.title))#输出类型。
 print(soup.title.name)#姓名。
@@ -70,3 +78,23 @@ print(soup.title.attrs)#属性
 title
 {'id': 'id_title', 'class': ['class_title1', 'class_title2']}
 '''
+
+print(type(soup.p.string))
+print(soup.p.string)#打印p標簽裏的文字.
+'''
+输出：
+<class 'bs4.element.NavigableString'>
+The Dormouse's story
+'''
+
+print(type(soup))
+print(soup.name)
+print(soup.attrs)
+'''
+输出：
+<class 'bs4.BeautifulSoup'>
+[document]
+{}
+'''
+
+
