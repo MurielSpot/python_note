@@ -41,3 +41,26 @@
 .next_elements 属性 
 .previous_elements 属性
 '''
+from bs4 import BeautifulSoup
+
+test='''
+<html>
+<body>
+<p>a_p</p>
+<p>b_p</p>
+<div>abc<br/>abc</div>
+</body>
+</html>
+'''
+soup=BeautifulSoup(test,'lxml')
+print(soup.p.string)#输出a_p,第二个p被忽略了。
+print(soup.div.string)#输出None，因为div里有大于一个NavigableString类型子节点，所以输出None。
+
+print(soup.div.strings)#<generator object _all_strings at 0x000002B15F0D4200>
+print(list(soup.div.strings))#['abc', '      abc']
+print(soup.div.stripped_strings)#<generator object stripped_strings at 0x000002B15F0D4200>
+print(list(soup.div.stripped_strings))#['abc', 'abc']
+
+
+
+
