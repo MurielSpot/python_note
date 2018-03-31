@@ -130,15 +130,15 @@ find_all_previous()
 ###########################################################################################
 CSS选择器
 1. 通过标签名查找
-
+print(soup.select('p'))找p标签。
 2. 通过类名查找
-
+print(soup.select('.p-class'))找class为p-class的标签。
 3. 通过 id 名查找
-
+print(soup.select('#panda'))找id为panda的标签。
 4. 组合查找
-
+print(soup.select('div #panda'))找div下class为panda的标签。
 5. 属性查找
-
+soup.select('p[class="p-class"]')找class等于p-class的p标签。
 
 '''
 
