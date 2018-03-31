@@ -10,7 +10,7 @@
 
 多个内容
 .strings 属性 获取所有内容, 返回一个generator(包括空白字符) 
-.stripped_strings 属性 获取所有内容, 返回一个generator(去除空白字符)
+.stripped_strings 属性 获取所有内容, 返回一个generator(去除首尾的空白字符)
 
 直接子节点
 .contents 属性 将tag的子节点以列表的方式输出 
