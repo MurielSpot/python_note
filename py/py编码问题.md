@@ -1,5 +1,5 @@
 ##### python中的encode和decode
-
+参考：https://www.cnblogs.com/vipchenwei/p/6993788.html<br/>
 decode的作用是将其他编码的字符转换成unicode编码,如str1,decode('gb2312'),表示将gb2312编码的字符串str1转换成unicode编码。<br/>
 encode的作用是将unicode编码转换成其他编码的字符串,如str2,encode('gb2312'),表示将unicode编码的字符串str2转换成gb2312编码。<br/>
 
