@@ -5,6 +5,9 @@ str(s)和unicode(s)分别返回str字符串对象和Unicode字符串对象。
 <br/>unicode有同样的问题，unicode(ss)等效于ss.decode('ascii'),因此要正确转换就要指定编码，如ss.decode('gbk')。
 <br/>为防止乱码问题，最好始终使用同一种编码格式进行编码和解码操作。
 
+<br/>Python3x中(str).encode(编码)=(bytes) 
+<br/>(bytes).decode(‘bytes对应的编码’)=(str) 
+
 ##### python中的encode和decode
 参考：https://www.cnblogs.com/vipchenwei/p/6993788.html<br/>
 decode的作用是将其他编码的字符转换成unicode编码,如str1,decode('gb2312'),表示将gb2312编码的字符串str1转换成unicode编码。<br/>
