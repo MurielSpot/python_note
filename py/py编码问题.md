@@ -1,9 +1,9 @@
 ##### 编码的转换
-
+以下说法基于python2.x：<br/>
 str(s)和unicode(s)分别返回str字符串对象和Unicode字符串对象。
 <br/>str(s)是s.encode('ascii')的简写，即执行str(s)相当于执行s.encode('ascii')，所以如果用str(s)输出s字符串里的中文，会报错，应该指定正确的编码，再str，比如str(s.encode('gbk'))是将数据按gbk格式解释，再把它转为字符串对象。
 <br/>unicode有同样的问题，unicode(ss)等效于ss.decode('ascii'),因此要正确转换就要指定编码，如ss.decode('gbk')。
-
+<br/>为防止乱码问题，最好始终使用同一种编码格式进行编码和解码操作。
 
 ##### python中的encode和decode
 参考：https://www.cnblogs.com/vipchenwei/p/6993788.html<br/>
