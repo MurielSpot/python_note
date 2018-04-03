@@ -1,4 +1,6 @@
 # python笔记
+这里的python语句如果没有标注，大部分可默认用的是pyhton 3x。
+
 ## python参考资料
 * [python3教程http://www.runoob.com/python3/python3-tutorial.html](http://www.runoob.com/python3/python3-tutorial.html)
 * [python教程-廖雪峰https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000)
