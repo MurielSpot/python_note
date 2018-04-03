@@ -18,6 +18,7 @@ line=delimiter.join(list1)
 print line
 like the world
 ```
+参考资料：http://www.jb51.net/article/47956.htm
 
 s.isalnum() 所有字符都是数字或者字母
 
@@ -33,6 +34,17 @@ s.istitle() 所有单词都是首字母大写，像标题
 
 s.isspace() 所有字符都是空白字符
 
+S.lower() #小写 
+
+S.upper() #大写 
+
+S.swapcase() #大小写互换 
+
+S.capitalize() #首字母大写 
+
+sStr1 = sStr1[::-1] #翻转字符串
+
+sStr1.find(sStr2) #查找字符串
 
 ## 如何去掉空白字符
 string.strip(s)，s是一个序列，在string的两边删除string中在序列s中的字符。
