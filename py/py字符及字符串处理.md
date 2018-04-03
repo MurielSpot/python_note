@@ -45,3 +45,12 @@ like   the    world
 ```
 a='...like...the....world............'
 b=string.replace(a,'.',' ')#对a进行
+
+## 读取utf-8格式的txt文件，开头出现不明字符\xef\xbb\xbf
+读取的时候第一个元素为‘\xef\xbb\xbf1883’，上网看了一些资料，原来在python的file对象的readline以及readlines程序中，针对一些UTF-8编码的文件，开头会加入BOM来表明编码方式。 <br/>
+解决方法有很多种： 
+
+- [这篇博客引用](http://www.cnblogs.com/nx520zj/p/5869241.html)codecs模块，来判断前三个字节是否为BOM_UTF8。如果是，则剔除\xef\xbb\xbf字节。 
+- 另外还有很多解决方案，可以判断列表中是否有\xef\xbb\xbf字符，如果有，用replace()替换为空的，代码如下：<br/>
+  if '\xef\xbb\xbf'  in line:<br/>
+  	str1 = line.replace('\xef\xbb\xbf','')#用replace替换掉'\xef\xbb\xbf'<br/>
