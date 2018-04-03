@@ -9,6 +9,10 @@ b'\xe2\x82\xac20'
 '€20'
 ```
 
+### 不同编码的例子
+一个“中”字，在不同编码中用如下字节表示：<br/>
+GBK       Big5      UTF-8         UTF-16LE <br/>
+\xD6\xD0  \xA4\xA4  \xE4\xB8\xAD  \x2D\x4E 
 
 ### 编码的转换
 以下说法基于python2.x：<br/>
