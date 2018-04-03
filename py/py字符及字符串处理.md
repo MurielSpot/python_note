@@ -45,6 +45,7 @@ like   the    world
 ```
 a='...like...the....world............'
 b=string.replace(a,'.',' ')#对a进行
+```
 
 ## 读取utf-8格式的txt文件，开头出现不明字符\xef\xbb\xbf
 读取的时候第一个元素为‘\xef\xbb\xbf1883’，上网看了一些资料，原来在python的file对象的readline以及readlines程序中，针对一些UTF-8编码的文件，开头会加入BOM来表明编码方式。 <br/>
