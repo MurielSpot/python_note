@@ -19,6 +19,21 @@ print line
 like the world
 ```
 
+s.isalnum() 所有字符都是数字或者字母
+
+s.isalpha() 所有字符都是字母
+
+s.isdigit() 所有字符都是数字
+
+s.islower() 所有字符都是小写
+
+s.isupper() 所有字符都是大写
+
+s.istitle() 所有单词都是首字母大写，像标题
+
+s.isspace() 所有字符都是空白字符
+
+
 ## 如何去掉空白字符
 string.strip(s)，s是一个序列，在string的两边删除string中在序列s中的字符。
 - string.lstrip(s)   在string的左边删除string中在序列s中的字符。
