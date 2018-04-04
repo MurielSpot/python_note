@@ -1,5 +1,5 @@
 ## 目录操作
-### python列出文件夹下所有文件的四个方法
+### python列出文件夹下所有文件的方法
 方法1：使用os.listdir
 
 ```
@@ -38,15 +38,14 @@ for dirpath, dirnames, filenames in os.walk('c:\\winnt'):
         print ' File', filename
 ```
 
-另外，判断文件与目录是否存在：
+## 判断文件与目录是否存在：
 
 ```
 import os
-os.path.isfile('test.txt') #如果不存在就返回False
+os.path.isfile('test.txt') #是否是文件，如果不存在就返回False
 os.path.exists(directory) #如果目录不存在就返回False
+os.path.isdir(directory) #是否是文件夹
 ```
-
-
 
 ## 文件读写
 ### 文件读写常用函数
