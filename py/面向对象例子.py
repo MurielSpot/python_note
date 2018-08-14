@@ -69,7 +69,54 @@ print(c.__name__)#teshu
 # 但是，按照约定俗成的规定，当你看到这样的变量时，意思就是，“虽然我可以被访问，但是，请把我视为私有变量，不要随意访问”。
 
 # example 3 ######################################################################
+# 继承与多态
 
+class Animal(object):
+    def run(self):
+        print('Animal is running...')
 
+#继承.
+class Dog(Animal):
+    pass
 
+class Cat(Animal):
+    def run(self):
+        print('cat is running...')
+
+    def bask(self):
+        print('cat is basking in the sun.')
+
+dog=Dog()
+dog.run()#Animal is running...
+
+cat=Cat()
+cat.run()#cat is running...
+cat.bask()#cat is basking in the sun.
+
+#多态.
+print(isinstance(dog, Animal))#True
+print(isinstance(dog, Dog))#True
+
+animal=Animal()
+print(isinstance(animal,Dog))#False
+
+# 多态的好处例子.
+# 只需要传入Animal类型,就可以执行相应的run.
+def run_twice(animal):
+    animal.run()
+    animal.run()
+
+run_twice(Animal())
+
+# 新增一个Animal的子类，不必对run_twice()做任何修改，
+# 实际上，任何依赖Animal作为参数的函数或者方法都可以不加修改地正常运行，原因就在于多态。
+run_twice(Cat())
+'''
+Animal is running...
+Animal is running...
+cat is running...
+cat is running...
+'''
+
+# example 4 ######################################################################
 
