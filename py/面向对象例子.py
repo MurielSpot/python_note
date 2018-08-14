@@ -102,9 +102,11 @@ print(isinstance(animal,Dog))#False
 
 # 多态的好处例子.
 # 只需要传入Animal类型,就可以执行相应的run.
-def run_twice(animal):
-    animal.run()
-    animal.run()
+# 对于静态语言（例如Java）来说，如果需要传入Animal类型，则传入的对象必须是Animal类型或者它的子类，否则，将无法调用run()方法。
+# 对于Python这样的动态语言来说，则不一定需要传入Animal类型。我们只需要保证传入的对象有一个run()方法就可以了.
+def run_twice(a):
+    a.run()
+    a.run()
 
 run_twice(Animal())
 
@@ -118,5 +120,22 @@ cat is running...
 cat is running...
 '''
 
+# 如果要获得一个对象的所有属性和方法，可以使用dir()函数，它返回一个包含字符串的list.
+print(dir(animal))
+'''
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', 
+'__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', 
+'__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', 
+'__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'run']
+'''
+
 # example 4 ######################################################################
 
+
+# example 5 ######################################################################
+
+
+# example 6 ######################################################################
+
+
+# example 7 ######################################################################
